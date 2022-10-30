@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about.component';
 
 export const routes: Routes = [
-  { path: '', component: AboutComponent, pathMatch: 'full'  }
+  { path: '', component: AboutComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -14,10 +14,8 @@ export const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  declarations: [
-    AboutComponent
-  ]
+  declarations: [AboutComponent],
 })
-export class AboutModule { }
+export class AboutModule {}

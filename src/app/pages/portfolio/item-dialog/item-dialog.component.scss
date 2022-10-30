@@ -1,27 +1,27 @@
-// @import '../../../theme/styles/variables';
+.item-dialog {
+  .mat-dialog-container {
+    overflow: visible !important;
 
-.item-dialog{
-    .mat-dialog-container{
-        overflow: visible !important;
-        .close-btn-outer{
-            position: relative;
-            button{
-                position: absolute;
-                right: -44px;
-                top: -44px;
-            }
-        }
-        .cat{
-            // font-family: $secondary-font-family;
-            font-style: italic;
-            font-size: 14px;
-            text-transform: capitalize;
-        }     
+    .close-btn-outer {
+      position: relative;
+
+      button {
+        position: absolute;
+        right: -44px;
+        top: -44px;
+      }
     }
+
+    .cat {
+      font-style: italic;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
 }
 
-@media screen and (min-width: 960px) { 
-    .item-dialog{
-        max-width: 50vw !important;
-    }
+@media screen and (min-width: 960px) {
+  .item-dialog {
+    max-width: 50vw !important;
+  }
 }

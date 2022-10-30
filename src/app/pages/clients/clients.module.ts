@@ -8,20 +8,16 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AllClientsComponent } from './all-clients/all-clients.component';
 
 export const routes: Routes = [
-  { path: '', component: ClientsComponent, pathMatch: 'full'  }
+  { path: '', component: ClientsComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,    
-    RouterModule.forChild(routes),
-    SharedModule
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   declarations: [
     ClientsComponent,
     TestimonialsComponent,
     StatisticsComponent,
-    AllClientsComponent
-  ]
+    AllClientsComponent,
+  ],
 })
-export class ClientsModule { }
+export class ClientsModule {}

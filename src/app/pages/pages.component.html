@@ -1,62 +1,77 @@
-<mat-toolbar color="primary" class="horizontal-menu" ngClass.gt-sm="px-0">
-    <div fxLayout="row" fxLayoutAlign="space-between center" fxHide="false" fxHide.gt-sm class="w-100"> 
-        <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
-        <span class="person-name">Emilio Verdines</span>
-    </div>
-    <div fxShow="false" fxShow.gt-sm class="container"> 
-        <app-menu></app-menu>
-    </div>
+<mat-toolbar color='primary' class='horizontal-menu' ngClass.gt-sm='px-0'>
+  <div fxLayout='row' fxLayoutAlign='space-between center' fxHide='false' fxHide.gt-sm
+       class='w-100'>
+    <button mat-icon-button (click)='drawer.toggle()'>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class='person-name'>Emilio Verdines</span>
+  </div>
+  <div fxShow='false' fxShow.gt-sm class='container'>
+    <app-menu></app-menu>
+  </div>
 </mat-toolbar>
 
 <mat-drawer-container>
-    <mat-drawer #drawer mode="over" class="sidenav" autoFocus="false">
-        <div [perfectScrollbar]="" class="h-100">
-            <app-menu></app-menu>
-        </div>
-    </mat-drawer>    
+  <mat-drawer #drawer mode='over' class='sidenav' autoFocus='false'>
+    <div [perfectScrollbar]='' class='h-100'>
+      <app-menu></app-menu>
+    </div>
+  </mat-drawer>
 
-    <mat-drawer-content>
-        <div class="wrapper">
-            <router-outlet></router-outlet> 
-        </div>
-        <app-footer></app-footer>
-        <div fxLayout="row" fxLayoutAlign="center center" class="options-icon" (click)="options.toggle()">
-            <mat-icon>settings</mat-icon>
-        </div>
-        <div *ngIf="showBackToTop" fxLayout="row" fxLayoutAlign="center center" class="back-to-top transition" (click)="scrollToTop()">
-            <mat-icon>arrow_upward</mat-icon>
-        </div>
-    </mat-drawer-content>
+  <mat-drawer-content>
+    <div class='wrapper'>
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+    <div fxLayout='row' fxLayoutAlign='center center' class='options-icon'
+         (click)='options.toggle()'>
+      <mat-icon>settings</mat-icon>
+    </div>
+    <div *ngIf='showBackToTop' fxLayout='row' fxLayoutAlign='center center'
+         class='back-to-top transition' (click)='scrollToTop()'>
+      <mat-icon>arrow_upward</mat-icon>
+    </div>
+  </mat-drawer-content>
 
-    <mat-drawer #options position="end" class="options" [perfectScrollbar]=""> 
-            <div fxLayout="column" class="control">
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <button mat-raised-button class="indigo-light" (click)="changeSkin('indigo-light')">&nbsp;</button>
-                    <button mat-raised-button class="blue-dark" (click)="changeSkin('blue-dark')">&nbsp;</button>                    
-                </div>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <button mat-raised-button class="teal-light" (click)="changeSkin('teal-light')">&nbsp;</button>
-                    <button mat-raised-button class="green-dark" (click)="changeSkin('green-dark')">&nbsp;</button>                    
-                </div>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <button mat-raised-button class="red-light" (click)="changeSkin('red-light')">&nbsp;</button>
-                    <button mat-raised-button class="pink-dark" (click)="changeSkin('pink-dark')">&nbsp;</button>                   
-                </div>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <button mat-raised-button class="grey-light" (click)="changeSkin('grey-light')">&nbsp;</button>
-                    <button mat-raised-button class="amber-dark" (click)="changeSkin('amber-dark')">&nbsp;</button>                   
-                </div>
-            </div>
+  <mat-drawer #options position='end' class='options' [perfectScrollbar]=''>
+    <div fxLayout='column' class='control'>
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <button mat-raised-button class='indigo-light' (click)="changeSkin('indigo-light')">&nbsp;
+        </button>
+        <button mat-raised-button class='blue-dark' (click)="changeSkin('blue-dark')">&nbsp;
+        </button>
+      </div>
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <button mat-raised-button class='teal-light' (click)="changeSkin('teal-light')">&nbsp;
+        </button>
+        <button mat-raised-button class='green-dark' (click)="changeSkin('green-dark')">&nbsp;
+        </button>
+      </div>
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <button mat-raised-button class='red-light' (click)="changeSkin('red-light')">&nbsp;
+        </button>
+        <button mat-raised-button class='pink-dark' (click)="changeSkin('pink-dark')">&nbsp;
+        </button>
+      </div>
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <button mat-raised-button class='grey-light' (click)="changeSkin('grey-light')">&nbsp;
+        </button>
+        <button mat-raised-button class='amber-dark' (click)="changeSkin('amber-dark')">&nbsp;
+        </button>
+      </div>
+    </div>
 
-            <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-            <div fxLayout="column" class="control">
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <mat-icon class="mat-icon-lg">image</mat-icon>
-                    <mat-slide-toggle [checked]="settings.hasBgImage" (change)="settings.hasBgImage = !settings.hasBgImage" labelPosition="before"></mat-slide-toggle>
-                </div>         
-            </div>
+    <div fxLayout='column' class='control'>
+      <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <mat-icon class='mat-icon-lg'>image</mat-icon>
+        <mat-slide-toggle [checked]='settings.hasBgImage'
+                          (change)='settings.hasBgImage = !settings.hasBgImage'
+                          labelPosition='before'></mat-slide-toggle>
+      </div>
+    </div>
 
-    </mat-drawer>
+  </mat-drawer>
 
 </mat-drawer-container>

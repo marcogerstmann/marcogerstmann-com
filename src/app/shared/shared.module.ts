@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button'; 
+import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -23,20 +23,21 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
- 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  wheelPropagation: false,
-  suppressScrollX: true               
-};
-
+import {
+  PERFECT_SCROLLBAR_CONFIG,
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarModule,
+} from 'ngx-perfect-scrollbar';
 import { ImageLoaderComponent } from './image-loader/image-loader.component';
 import { ContentHeaderComponent } from './content-header/content-header.component';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  wheelPropagation: false,
+  suppressScrollX: true,
+};
 
 @NgModule({
   imports: [
@@ -57,7 +58,7 @@ import { ContentHeaderComponent } from './content-header/content-header.componen
     MatMenuModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatRadioModule, 
+    MatRadioModule,
     MatSelectModule,
     MatSidenavModule,
     MatSliderModule,
@@ -66,7 +67,7 @@ import { ContentHeaderComponent } from './content-header/content-header.componen
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
   ],
   exports: [
     FlexLayoutModule,
@@ -85,7 +86,7 @@ import { ContentHeaderComponent } from './content-header/content-header.componen
     MatMenuModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatRadioModule, 
+    MatRadioModule,
     MatSelectModule,
     MatSidenavModule,
     MatSliderModule,
@@ -96,14 +97,14 @@ import { ContentHeaderComponent } from './content-header/content-header.componen
     MatTooltipModule,
     PerfectScrollbarModule,
     ImageLoaderComponent,
-    ContentHeaderComponent
+    ContentHeaderComponent,
   ],
-  declarations: [
-    ImageLoaderComponent,
-    ContentHeaderComponent
+  declarations: [ImageLoaderComponent, ContentHeaderComponent],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
   ],
-  providers:[
-    { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG }
-  ]
 })
-export class SharedModule { }
+export class SharedModule {}

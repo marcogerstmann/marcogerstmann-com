@@ -5,17 +5,11 @@ import { SharedModule } from '../../shared/shared.module';
 import { TeamComponent } from './team.component';
 
 export const routes: Routes = [
-  { path: '', component: TeamComponent, pathMatch: 'full'  }
+  { path: '', component: TeamComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,    
-    RouterModule.forChild(routes),
-    SharedModule
-  ],
-  declarations: [
-    TeamComponent
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  declarations: [TeamComponent],
 })
-export class TeamModule { }
+export class TeamModule {}

@@ -5,19 +5,18 @@ import { Settings } from '../../app.settings.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   public settings: Settings;
-  constructor(public appSettings:AppSettings) {
+
+  constructor(public appSettings: AppSettings) {
     this.settings = this.appSettings.settings;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  getDemo(skin:string){
+  getDemo(skin: string) {
     this.settings.skin = skin;
   }
-
 }

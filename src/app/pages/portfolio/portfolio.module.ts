@@ -6,18 +6,11 @@ import { PortfolioComponent } from './portfolio.component';
 import { ItemDialogComponent } from './item-dialog/item-dialog.component';
 
 export const routes: Routes = [
-  { path: '', component: PortfolioComponent, pathMatch: 'full'  }
+  { path: '', component: PortfolioComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild(routes),
-        SharedModule
-    ],
-    declarations: [
-        PortfolioComponent,
-        ItemDialogComponent
-    ]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  declarations: [PortfolioComponent, ItemDialogComponent],
 })
-export class PortfolioModule { }
+export class PortfolioModule {}

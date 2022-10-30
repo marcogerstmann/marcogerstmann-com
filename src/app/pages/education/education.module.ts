@@ -5,17 +5,11 @@ import { SharedModule } from '../../shared/shared.module';
 import { EducationComponent } from './education.component';
 
 export const routes: Routes = [
-  { path: '', component: EducationComponent, pathMatch: 'full'  }
+  { path: '', component: EducationComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,    
-    RouterModule.forChild(routes),
-    SharedModule
-  ],
-  declarations: [
-    EducationComponent
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  declarations: [EducationComponent],
 })
-export class EducationModule { }
+export class EducationModule {}

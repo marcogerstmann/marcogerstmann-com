@@ -1,140 +1,165 @@
 @import "../theme/styles/_variables";
 
-.horizontal-menu{
-    position: fixed;
-    height: $toolbar-height;
-    z-index: 9;
-}
-.mat-drawer-container{
-    min-height: 100%;
-    height: auto!important;
-    padding-top: $toolbar-height;
-}
-.mat-drawer{
-    top: $toolbar-height;
-}
-.mat-drawer-content{
-    overflow:hidden !important;
-}
-.sidenav{
-    width: $sidenav-width;
-    position: fixed;
-    overflow: hidden;
-}
-.wrapper{
-    min-height: calc(100vh - (#{$toolbar-height} + #{$footer-height}));
+.horizontal-menu {
+  position: fixed;
+  height: $toolbar-height;
+  z-index: 9;
 }
 
-.back-to-top{
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    z-index: 999999;
-    right: 20px;
-    bottom: 20px;
-    opacity: .5;
-    color: #fff;
-    background-color: rgba(0,0,0,.75);
-    border-radius: 4px;    
-    &:hover{
-        opacity: 0.9;
-    }    
+.mat-drawer-container {
+  min-height: 100%;
+  height: auto !important;
+  padding-top: $toolbar-height;
 }
 
-.options{
-    position: fixed;
-    max-height: 278px;
-    width: 122px; 
-    overflow: hidden;
-    z-index: 99;
-    .control{
-        padding: 6px 14px;
-        div{
-            padding: 6px 0;
-        }
-        h4{
-            border-bottom: 1px solid #ccc;
-            margin: 12px 0 6px 0;
-        }
-        button.mat-raised-button{
-            min-width: 40px;
-            line-height: 39px;
-            padding: 0;
-            &.indigo-light{
-                background:#3F51B5;
-                background: linear-gradient(135deg, #3F51B5 50%, #ececec 50%);
-            }
-            &.teal-light{
-                background:#009688;
-                background: linear-gradient(135deg, #009688 50%, #ececec 50%);
-            }
-            &.red-light{
-                background:#F44336;
-                background: linear-gradient(135deg, #F44336 50%, #ececec 50%);
-            }
-            &.grey-light{
-                background:#455A64;
-                background: linear-gradient(135deg, #455A64 50%, #ececec 50%);
-            }
-            &.blue-dark{
-                background:#0277bd;
-                background: linear-gradient(135deg, #0277bd 50%, #262626 50%);
-            }
-            &.green-dark{
-                background:#388E3C;
-                background: linear-gradient(135deg, #388E3C 50%, #262626 50%);
-            }
-            &.pink-dark{
-                background:#D81B60;
-                background: linear-gradient(135deg, #D81B60 50%, #262626 50%);
-            }  
-            &.amber-dark{
-                background:#FFA000;
-                background: linear-gradient(135deg, #FFA000 50%, #262626 50%);
-            } 
-        }
-    }
-    .mat-radio-group{
-        display: inline-flex;
-        flex-direction: column;
-        .mat-radio-button{
-            margin: 2px 0;
-        }
-    }
-    .mat-slide-toggle{
-        height: auto;
-    }
-}
-.options-icon{
-    position: fixed;
-    top: 110px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background: rgba(0,0,0,.7);
-    color: #fff;
-    cursor: pointer;
-    z-index: 999999;
-    .mat-icon{
-        -webkit-animation: spin 8s linear infinite;
-        -moz-animation: spin 8s linear infinite;
-        animation: spin 8s linear infinite;
-    }
+.mat-drawer {
+  top: $toolbar-height;
 }
 
-@-moz-keyframes spin { 
-    100% { 
-        -moz-transform: rotate(360deg); 
-    } 
+.mat-drawer-content {
+  overflow: hidden !important;
 }
-@-webkit-keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-    } 
+
+.sidenav {
+  width: $sidenav-width;
+  position: fixed;
+  overflow: hidden;
 }
-@keyframes spin { 
-    100% { 
-        transform: rotate(360deg);
+
+.wrapper {
+  min-height: calc(100vh - (#{$toolbar-height} + #{$footer-height}));
+}
+
+.back-to-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 999999;
+  right: 20px;
+  bottom: 20px;
+  opacity: .5;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .75);
+  border-radius: 4px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.options {
+  position: fixed;
+  max-height: 278px;
+  width: 122px;
+  overflow: hidden;
+  z-index: 99;
+
+  .control {
+    padding: 6px 14px;
+
+    div {
+      padding: 6px 0;
     }
+
+    h4 {
+      border-bottom: 1px solid #ccc;
+      margin: 12px 0 6px 0;
+    }
+
+    button.mat-raised-button {
+      min-width: 40px;
+      line-height: 39px;
+      padding: 0;
+
+      &.indigo-light {
+        background: #3F51B5;
+        background: linear-gradient(135deg, #3F51B5 50%, #ececec 50%);
+      }
+
+      &.teal-light {
+        background: #009688;
+        background: linear-gradient(135deg, #009688 50%, #ececec 50%);
+      }
+
+      &.red-light {
+        background: #F44336;
+        background: linear-gradient(135deg, #F44336 50%, #ececec 50%);
+      }
+
+      &.grey-light {
+        background: #455A64;
+        background: linear-gradient(135deg, #455A64 50%, #ececec 50%);
+      }
+
+      &.blue-dark {
+        background: #0277bd;
+        background: linear-gradient(135deg, #0277bd 50%, #262626 50%);
+      }
+
+      &.green-dark {
+        background: #388E3C;
+        background: linear-gradient(135deg, #388E3C 50%, #262626 50%);
+      }
+
+      &.pink-dark {
+        background: #D81B60;
+        background: linear-gradient(135deg, #D81B60 50%, #262626 50%);
+      }
+
+      &.amber-dark {
+        background: #FFA000;
+        background: linear-gradient(135deg, #FFA000 50%, #262626 50%);
+      }
+    }
+  }
+
+  .mat-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+
+    .mat-radio-button {
+      margin: 2px 0;
+    }
+  }
+
+  .mat-slide-toggle {
+    height: auto;
+  }
+}
+
+.options-icon {
+  position: fixed;
+  top: 110px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  cursor: pointer;
+  z-index: 999999;
+
+  .mat-icon {
+    -webkit-animation: spin 8s linear infinite;
+    -moz-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }

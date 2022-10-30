@@ -7,19 +7,11 @@ import { MonthlyComponent } from './monthly/monthly.component';
 import { YearlyComponent } from './yearly/yearly.component';
 
 export const routes: Routes = [
-  { path: '', component: PricingComponent, pathMatch: 'full'  }
+  { path: '', component: PricingComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,    
-    RouterModule.forChild(routes),
-    SharedModule
-  ],
-  declarations: [
-    PricingComponent,
-    MonthlyComponent,
-    YearlyComponent
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  declarations: [PricingComponent, MonthlyComponent, YearlyComponent],
 })
-export class PricingModule { }
+export class PricingModule {}
