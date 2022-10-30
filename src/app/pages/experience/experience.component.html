@@ -1,0 +1,22 @@
+<app-content-header icon="touch_app" headerTitle="Experience" desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Etiam semper non dolor a consectetur. "></app-content-header>
+
+<div class="container p-3">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">        
+        <div fxFlex="100" fxFlex.gt-md="85" fxFlex.md="90" class="p-3"> 
+            <div class="timeline-container">
+                <div fxLayout="row wrap"> 
+                    <div *ngFor="let expirience of expiriences; let first=first; let odd=odd;" fxFlex="100" fxLayout="row wrap" [fxLayoutAlign]="(odd)?'end':'start'" class="timeline-block">        
+                        <mat-chip-list class="timeline-date">
+                            <mat-chip [color]="(first)?'primary':'accent'" selected="true" class="mat-elevation-z2">{{expirience.dateRange}}</mat-chip>
+                        </mat-chip-list>
+                        <mat-card fxFlex="100" fxFlex.gt-sm="45" class="timeline-content" [class.first]="first">
+                            <h3>{{expirience.position}}</h3>
+                            <p class="secondary-text-color company"><small>{{expirience.company}} ({{expirience.fullDateRange}})</small></p>
+                            <p class="secondary-text-color">{{expirience.desc}}</p>
+                        </mat-card>     
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

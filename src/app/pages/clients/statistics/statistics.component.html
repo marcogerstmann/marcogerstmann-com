@@ -1,0 +1,12 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="statistics">
+    <h2 class="statistic-title mb-2 mt-5">Any Statistics</h2> 
+    <div *ngFor="let statistic of statistics" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="p-3">
+        <mat-card fxLayout="column" fxLayoutAlign="center center" class="w-100 item">            
+            <div class="text-center statistic-count">{{statistic.count}}</div> 
+            <div fxLayout="row" fxLayoutAlign="center center" class="secondary-text-color">
+            <mat-icon class="mr-2">{{statistic.icon}}</mat-icon>
+            <span>{{statistic.title}}</span>
+            </div>          
+        </mat-card>
+    </div>
+</div>

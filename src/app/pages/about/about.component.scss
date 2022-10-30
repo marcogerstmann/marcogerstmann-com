@@ -1,0 +1,13 @@
+@import '../../theme/styles/variables';
+   
+.about-list{   
+    span{               
+        display: inline-block;               
+        &.list-title{
+            width: 110px; 
+            font-size: 14px; 
+            font-weight: 500;
+            text-transform: uppercase;  
+        }     
+    } 
+}

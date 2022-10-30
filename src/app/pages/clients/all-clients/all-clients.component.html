@@ -1,0 +1,14 @@
+<div fxLayout="row wrap">    
+    <div fxFlex="100">
+        <div class="all-clients swiper-container pb-5" [swiper]="config">
+            <div class="swiper-wrapper">
+                <div *ngFor="let client of clients" class="swiper-slide">                        
+                    <div class="item">
+                        <img [src]="client" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination white"></div>
+        </div>
+    </div>
+</div>
