@@ -43,23 +43,7 @@ export class PagesComponent implements OnInit {
         if (window.innerWidth <= 960) {
           this.drawer.close();
         }
-        this.scrollToTop();
       }
     });
-  }
-
-  public scrollToTop() {
-    var scrollDuration = 200;
-    var scrollStep = -window.scrollY / (scrollDuration / 20);
-    var scrollInterval = setInterval(() => {
-      if (window.scrollY != 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 10);
-    if (window.innerWidth <= 960) {
-      window.scrollTo(0, 0);
-    }
   }
 }

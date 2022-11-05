@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  person: string = 'assets/img/person.jpg';
+  image: string = 'assets/img/marco.png';
 
   constructor() {}
 
