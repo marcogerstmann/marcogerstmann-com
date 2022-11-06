@@ -1,7 +1,7 @@
 <app-content-header
-  [image]="image"
-  headerTitle="Marco Gerstmann"
-  desc="I'm a passionate UI/UX Designer and Front-End Developer creating modern and responsive design for Web and Mobile."
+  [image]="aboutData.imageUrl"
+  [headerTitle]="aboutData.firstName + ' ' + aboutData.lastName"
+  [desc]="aboutData.teaser"
 ></app-content-header>
 
 <div class="container p-3">
@@ -37,31 +37,19 @@
               <mat-list-item>
                 <div mat-line>
                   <span class="list-title">full name:</span>
-                  <span class="secondary-text-color">Emilio Verdines</span>
+                  <span class="secondary-text-color">{{aboutData.firstName + ' ' + aboutData.lastName}}</span>
                 </div>
               </mat-list-item>
               <mat-list-item>
                 <div mat-line>
                   <span class="list-title">birthday:</span>
-                  <span class="secondary-text-color">March 29, 1981</span>
+                  <span class="secondary-text-color">{{aboutData.birthday}}</span>
                 </div>
               </mat-list-item>
               <mat-list-item>
                 <div mat-line>
                   <span class="list-title">nationality:</span>
-                  <span class="secondary-text-color">USA</span>
-                </div>
-              </mat-list-item>
-              <mat-list-item>
-                <div mat-line>
-                  <span class="list-title">born:</span>
-                  <span class="secondary-text-color">Brooklyn, NY</span>
-                </div>
-              </mat-list-item>
-              <mat-list-item>
-                <div mat-line>
-                  <span class="list-title">address:</span>
-                  <span class="secondary-text-color">2903 Avenue Z, Brooklyn, NY</span>
+                  <span class="secondary-text-color">{{aboutData.nationality}}</span>
                 </div>
               </mat-list-item>
             </mat-list>
@@ -70,32 +58,14 @@
             <mat-list class="about-list">
               <mat-list-item>
                 <div mat-line>
-                  <span class="list-title">e-mail:</span>
-                  <span class="secondary-text-color">info@example.com</span>
+                  <span class="list-title">born:</span>
+                  <span class="secondary-text-color">{{aboutData.birthplace}}</span>
                 </div>
               </mat-list-item>
               <mat-list-item>
                 <div mat-line>
-                  <span class="list-title">phone:</span>
-                  <span class="secondary-text-color">+0 123-456-7890</span>
-                </div>
-              </mat-list-item>
-              <mat-list-item>
-                <div mat-line>
-                  <span class="list-title">website:</span>
-                  <span class="secondary-text-color">www.yourwebsite.loc</span>
-                </div>
-              </mat-list-item>
-              <mat-list-item>
-                <div mat-line>
-                  <span class="list-title">freelance:</span>
-                  <span class="secondary-text-color">Available</span>
-                </div>
-              </mat-list-item>
-              <mat-list-item>
-                <div mat-line>
-                  <span class="list-title">vacation:</span>
-                  <span class="secondary-text-color">till September 15, 2018</span>
+                  <span class="list-title">address:</span>
+                  <span class="secondary-text-color">{{aboutData.address}}</span>
                 </div>
               </mat-list-item>
             </mat-list>

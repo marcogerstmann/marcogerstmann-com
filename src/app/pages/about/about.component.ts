@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutDataService } from '../../services/about-data.service';
+import { AboutData } from '../../shared/model/AboutData';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  image: string = 'assets/img/marco.png';
+  aboutData!: AboutData;
 
-  constructor() {}
+  constructor(private aboutDataService: AboutDataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.aboutData = this.aboutDataService.get();
+  }
 }
