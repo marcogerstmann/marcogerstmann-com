@@ -13,15 +13,10 @@ import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MenuComponent } from './theme/components/menu/menu.component';
 import { FooterComponent } from './theme/components/footer/footer.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PagesComponent,
-    NotFoundComponent,
-    MenuComponent,
-    FooterComponent,
-  ],
+  declarations: [AppComponent, PagesComponent, NotFoundComponent, MenuComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,11 +24,9 @@ import { FooterComponent } from './theme/components/footer/footer.component';
     HttpClientModule,
     FormsModule,
     SharedModule,
+    ScullyLibModule
   ],
-  providers: [
-    AppSettings,
-    { provide: OverlayContainer, useClass: CustomOverlayContainer },
-  ],
-  bootstrap: [AppComponent],
+  providers: [AppSettings, { provide: OverlayContainer, useClass: CustomOverlayContainer }],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
