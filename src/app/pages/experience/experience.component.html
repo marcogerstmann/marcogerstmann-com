@@ -1,7 +1,4 @@
-<app-content-header
-  icon="touch_app"
-  headerTitle="Experience"
-></app-content-header>
+<app-content-header icon="touch_app" headerTitle="Experience"></app-content-header>
 
 <div class="container p-3">
   <div fxLayout="row wrap" fxLayoutAlign="center center">
@@ -9,7 +6,7 @@
       <div class="timeline-container">
         <div fxLayout="row wrap">
           <div
-            *ngFor="let expirience of expiriences; let first = first; let odd = odd"
+            *ngFor="let experience of experiences; let first = first; let odd = odd"
             fxFlex="100"
             fxLayout="row wrap"
             [fxLayoutAlign]="odd ? 'end' : 'start'"
@@ -17,15 +14,25 @@
           >
             <mat-chip-list class="timeline-date">
               <mat-chip [color]="first ? 'primary' : 'accent'" selected="true" class="mat-elevation-z2">{{
-                expirience.dateRange
+                experience.dateRange
               }}</mat-chip>
             </mat-chip-list>
             <mat-card fxFlex="100" fxFlex.gt-sm="45" class="timeline-content" [class.first]="first">
-              <h3>{{ expirience.position }}</h3>
-              <p class="secondary-text-color company">
-                <small>{{ expirience.company }} ({{ expirience.fullDateRange }})</small>
+              <h3>{{ experience.position }}</h3>
+              <p class="secondary-text-color">
+                <small>{{ experience.fullDateRange }}</small>
               </p>
-              <p class="secondary-text-color">{{ expirience.desc }}</p>
+              <p class="secondary-text-color company">
+                {{ experience.company }}
+              </p>
+              <ul class="secondary-text-color">
+                <li *ngFor="let bullet of experience.bullets">
+                  {{bullet}}
+                </li>
+              </ul>
+              <p class="secondary-text-color">
+                Focus Areas: <strong>{{experience.focusAreas}}</strong>
+              </p>
             </mat-card>
           </div>
         </div>
