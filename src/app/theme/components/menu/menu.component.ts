@@ -13,8 +13,8 @@ export class MenuComponent implements OnInit {
   public menuItems = [
     { title: 'about', routerLink: '/about', icon: 'person' },
     { title: 'experience', routerLink: '/experience', icon: 'touch_app' },
-    { title: 'skills', routerLink: '/skills', icon: 'build' },
-    { title: 'education', routerLink: '/education', icon: 'school' }
+    // { title: 'skills', routerLink: '/skills', icon: 'build' },
+    // { title: 'education', routerLink: '/education', icon: 'school' }
   ];
   public settings: Settings;
 
