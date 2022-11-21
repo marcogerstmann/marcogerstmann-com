@@ -1,0 +1,58 @@
+[
+  {
+    "position": "Software Developer",
+    "dateRange": "2021 - Present",
+    "fullDateRange": "Apr 2021 - Present day",
+    "company": "flexIT Software Engineering S.L.U (FRS), Palma de Mallorca, Spain",
+    "bullets": [
+      "Microservices architecture",
+      "Frontend (Angular Web App), backend (Java Spring Boot RESTful Service) and database (MySQL)",
+      "Test Driven Development (TDD)",
+      "Continuous Integration and Continuous Delivery",
+      "Agile software development"
+    ],
+    "focusAreas": " Angular (2+), Java Spring Boot, Test Driven Development, GitLab, IntelliJ IDEA, MySQL, Docker, Kubernetes, Jira, Scrum"
+  },
+  {
+    "position": "Software Engineer",
+    "dateRange": "2018 - 2021",
+    "fullDateRange": "Jun 2018 - Mar 2021",
+    "company": "Navis Carrier and Vessel Solutions (Kalmar Germany GmbH), Flensburg, Germany",
+    "bullets": [
+      "Development of a web application for the berth planning of container terminals",
+      "Frontend (Angular Web App), backend (Java Spring Boot RESTful Service) and database (PostgreSQL)",
+      "Test Driven Development (TDD)",
+      "Working in an international team (California, Spain, India, Germany)",
+      "Continuous Integration and Continuous Delivery",
+      "Agile software development with Extreme Programming"
+    ],
+    "focusAreas": "Angular (2+), Java Spring Boot, Test Driven Development, International work, GitHub, IntelliJ IDEA, PostgreSQL, Docker, Kubernetes, CircleCI, G Suite, Pivotal Tracker, Extreme Programming"
+  },
+  {
+    "position": "Software Developer",
+    "dateRange": "2016 - 2018",
+    "fullDateRange": "Jan 2016 - May 2018",
+    "company": "Daarwin Beratungsgesellschaft mbH, Flensburg, Germany",
+    "bullets": [
+      "Development of a responsive web application for the social sector",
+      "Implementation of technical requirements in frontend and backend",
+      "Ensuring the greatest possible browser compatibility",
+      "Quality assurance and maintenance of the product",
+      "Implementation of automated API endpoint tests with Postman"
+    ],
+    "focusAreas": "Responsive web development, AngularJS, TypeScript, JavaScript, HTML, CSS, C#.NET, MS SQL, RESTful API, Postman, Git, Visual Studio"
+  },
+  {
+    "position": "Software Developer",
+    "dateRange": "2014 - 2015",
+    "fullDateRange": "Sep 2014 - Dec 2015",
+    "company": "Theodor-Schäfer-Berufsbildungswerk, Husum, Germany",
+    "bullets": [
+      "Development of an enterprise desktop application for the administration of vocational training centers",
+      "Planning and design of software architectures",
+      "Planning and design of database architectures",
+      "Trained HTML, CSS and PHP to trainees"
+    ],
+    "focusAreas": "C#.NET, Windows Forms, Visual Studio, MS SQL, HTML, CSS, PHP"
+  }
+]
